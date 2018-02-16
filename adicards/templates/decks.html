@@ -1,0 +1,13 @@
+{% extends "header.html" %}
+
+{% block content %}
+    <h1 align="center">Decks:</h1>
+    {% for deck in object_list %}
+        <h5>
+            {{ deck.date_created|date:"Y-m-d" }}
+            <a href="/adicards/decks/{{ deck.id }}">
+                {{ deck.name }}
+            </a>
+        </h5>
+    {% endfor %}
+{% endblock %}
