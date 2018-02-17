@@ -52,5 +52,5 @@ def flashcard_create_view(request):
                 new_flashcard.save()  # To generate ID beforehand
                 new_flashcard.decks.add(*decks)
                 new_flashcard.save()
-                return HttpResponseRedirect('/adicards/flashcards/')
+                return HttpResponseRedirect('/adicards/decks/')
     return render(request, 'flashcard_create.html', {'form': FlashcardCreateForm()})
