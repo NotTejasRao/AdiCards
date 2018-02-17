@@ -10,9 +10,47 @@
   </head>
   <body>
 	<div id="content">
-        <h1 align="center">AdiCards</h1>
-	   {% block content %}
-	   {% endblock %}
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+            <a class="navbar-brand" href="/adicards/">AdiCards</a>
+
+            <!-- Navbar Toggle for smaller screens -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navigation -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/adicards/decks/">Decks</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/adicards/flashcards/">Flashcards</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Create
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                          <a class="dropdown-item" href="/adicards/create/deck/">Deck</a>
+                          <a class="dropdown-item" href="/adicards/create/flashcard/">Flashcard</a>
+                        </div>
+                    </li>
+                    <li class="nav-item pull-right">
+                        <a class="nav-link" href="#">Login</a>
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+
+
+        <div class="container">
+            {% block content %}
+            {% endblock %}
+        </div>
+
 	</div>
 
     <!-- Optional JavaScript -->

@@ -22,7 +22,7 @@ def deck_form(request):
             deck_name = form.cleaned_data['deck_name']
             new_deck = Deck(name=deck_name, date_created=datetime.now())
             new_deck.save()
-            return HttpResponseRedirect('/adicards/decks')
+            return HttpResponseRedirect('/adicards/decks/')
     else:
         form = DeckForm()
 
