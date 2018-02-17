@@ -7,4 +7,6 @@ urlpatterns = [re_path(r'^decks$',
                        ListView.as_view(queryset=Deck.objects.all().order_by('-date_created'),
                                         template_name='decks.html')),
                path('decks/<int:deck_id>/',
-                    views.deck_view)]
+                    views.deck_view),
+               path('decks/create/',
+                    views.deck_form)]
