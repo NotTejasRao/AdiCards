@@ -5,10 +5,14 @@ class Deck(models.Model):
     name = models.CharField(max_length=124)
     date_created = models.DateTimeField()
 
+    def __str__(self):
+        return '#' + str(self.id) + ' ' + str(self.name)
 
-class FlashCard(models.Model):
-    prompt = models.TextField()
+
+class Flashcard(models.Model):
+    url_prompt = models.URLField(default='#')
+    text_prompt = models.TextField()
     answer = models.TextField()
-    deck = models.ManyToManyField(Deck)
+    decks = models.ManyToManyField(Deck, related_name="flashcards")
 
-# Implement LearnMetaDate containing User -> FlashCard learning level
+# Implement LearnMetaDate containing User -> Flashcard learning level

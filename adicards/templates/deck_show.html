@@ -3,7 +3,7 @@
 {% block content %}
     <h1>{{ deck.name }}</h1>
     <h4>Created on: {{ deck.date_created }}</h4>
-    {% for flashcard in flashcard_set %}
+    {% for flashcard in flashcards %}
         <h5>
             {{ flashcard.prompt }}
             {{ flashcard.answer }}

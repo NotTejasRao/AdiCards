@@ -1,5 +1,5 @@
 from django.contrib import admin
-from adicards.models import Deck, FlashCard
+from adicards.models import Deck, Flashcard
 
 admin.site.register(Deck)
-admin.site.register(FlashCard)
+admin.site.register(Flashcard)
