@@ -38,16 +38,12 @@ def flashcard_create_view(request):
     if request.method == 'POST':
         form = FlashcardCreateForm(request.POST)
         if form.is_valid():
-            url_prompt = form.cleaned_data['url_prompt']
             text_prompt = form.cleaned_data['text_prompt']
             answer = form.cleaned_data['answer']
             decks = form.cleaned_data['decks']
 
-            has_prompt = (url_prompt or text_prompt)
-            has_answer = answer
-
-            if has_prompt and has_answer:  # Valid data was input
-                new_flashcard = Flashcard(url_prompt=url_prompt, text_prompt=text_prompt, answer=answer)
+            if text_prompt and answer:  # Valid data was input
+                new_flashcard = Flashcard(text_prompt=text_prompt, answer=answer)
                 # https://stackoverflow.com/questions/18048172/django-forms-many-to-many-relationships
                 new_flashcard.save()  # To generate ID beforehand
                 new_flashcard.decks.add(*decks)

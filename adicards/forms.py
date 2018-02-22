@@ -7,7 +7,6 @@ class DeckCreateForm(Form):
 
 
 class FlashcardCreateForm(Form):
-    url_prompt = URLField(label='URL Prompt Link (ex. Image, Website, etc.)')
     text_prompt = CharField(label='Text Prompt Link', widget=Textarea)
     answer = CharField(label='Answer', widget=Textarea)
     decks = ModelMultipleChoiceField(queryset=Deck.objects.all())

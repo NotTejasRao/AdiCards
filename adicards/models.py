@@ -10,7 +10,6 @@ class Deck(models.Model):
 
 
 class Flashcard(models.Model):
-    url_prompt = models.URLField(default='#')
     text_prompt = models.TextField()
     answer = models.TextField()
     decks = models.ManyToManyField(Deck, related_name="flashcards")
