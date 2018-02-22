@@ -1,25 +1,26 @@
 {% extends "header.html" %}
 
 {% block content %}
-    <h1>{{ deck.name }}</h1>
-    <h4>Created on: {{ deck.date_created }}</h4>
+    <h1 class="text-center mt-5">{{ deck.name }}</h1>
+    <h6 class="text-center">
+        Created on: {{ deck.date_created }}
+    </h6>
+
+    <hr>
+
     {% for flashcard in flashcards %}
+        <div class="card text-center flashcard mt-5">
+            <h5 class="card-header bg-dark text-white">{{ flashcard.text_prompt }}</h5>
 
-<div class="card mb-3">
-    <div class="card-body">
-        <h5 class="card-title">{{ flashcard.text_prompt }}</h5>
+            <div class="card-body">
+                <a class="card-title btn btn-primary" data-toggle="collapse" href="#{{ flashcard.id }}" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    Answer
+                </a>
 
-        <a class="btn btn-primary" data-toggle="collapse" href="#{{ flashcard.id }}" role="button" aria-expanded="false" aria-controls="collapseExample">
-            Answer
-        </a>
-
-        <div class="collapse" id="{{ flashcard.id }}">
-            <div class="card card-body">
-                {{ flashcard.answer }}
+                <div class="answer card-text collapse" id="{{ flashcard.id }}">
+                    {{ flashcard.answer }}
+                </div>
             </div>
         </div>
-  </div>
-</div>
-
     {% endfor %}
 {% endblock %}
