@@ -1,7 +1,9 @@
-from django.shortcuts import render, HttpResponseRedirect
-from adicards.models import Deck, Flashcard
-from adicards.forms import DeckCreateForm, FlashcardCreateForm
 from datetime import datetime
+
+from django.shortcuts import render, HttpResponseRedirect
+
+from adicards.forms import DeckCreateForm, FlashcardCreateForm
+from adicards.models import Deck, Flashcard
 
 
 def deck_view(request, deck_id):

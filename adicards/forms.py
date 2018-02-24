@@ -1,5 +1,6 @@
-from django.forms import Form, CharField, URLField, ModelMultipleChoiceField, Textarea
-from adicards.models import Deck, Flashcard
+from django.forms import Form, CharField, ModelMultipleChoiceField, Textarea
+
+from adicards.models import Deck
 
 
 class DeckCreateForm(Form):

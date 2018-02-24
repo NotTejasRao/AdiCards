@@ -1,9 +1,9 @@
 {% extends "header.html" %}
 
 {% block content %}
-    <form action="/adicards/create/flashcard/" method="post">
-        {% csrf_token %}
-        {{ form }}
-        <input type="submit" value="Submit" />
-    </form>
+<form action="/adicards/create/flashcard/" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit"/>
+</form>
 {% endblock %}

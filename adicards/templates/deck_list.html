@@ -1,17 +1,17 @@
 {% extends "header.html" %}
 
 {% block content %}
-    <div class="text-center">
-        <h1 class="mt-5">Decks:</h1>
-        {% for deck in object_list %}
-        <h5>
-            <small>
-                #{{ deck.id }}
-            </small>
-            <a href="/adicards/decks/{{ deck.id }}">
-                {{ deck.name }}
-            </a>
-        </h5>
-        {% endfor %}
-    </div>
+<div class="text-center">
+    <h1 class="mt-5">Decks:</h1>
+    {% for deck in object_list %}
+    <h5>
+        <small>
+            #{{ deck.id }}
+        </small>
+        <a href="/adicards/decks/{{ deck.id }}">
+            {{ deck.name }}
+        </a>
+    </h5>
+    {% endfor %}
+</div>
 {% endblock %}

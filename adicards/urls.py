@@ -1,7 +1,8 @@
 from django.urls import path
 from django.views.generic import ListView, TemplateView
-from adicards.models import Deck, Flashcard
+
 import adicards.views as views
+from adicards.models import Deck
 
 urlpatterns = [path('', TemplateView.as_view(template_name="index.html")),
                path('decks/',
