@@ -44,10 +44,11 @@ def flashcard_create_view(request):
             answer = form.cleaned_data['answer']
             decks = form.cleaned_data['decks']
 
-            if text_prompt and answer:  # Valid data was input
+            if text_prompt and answer and decks:  # All arguments were provided
                 new_flashcard = Flashcard(text_prompt=text_prompt, answer=answer)
                 # https://stackoverflow.com/questions/18048172/django-forms-many-to-many-relationships
                 new_flashcard.save()  # To generate ID beforehand
+                # https://stackoverflow.com/questions/11315010/what-do-and-before-a-variable-name-mean-in-a-function-signature
                 new_flashcard.decks.add(*decks)
                 new_flashcard.save()
                 return HttpResponseRedirect('/adicards/decks/')
