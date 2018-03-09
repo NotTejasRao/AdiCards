@@ -28,7 +28,7 @@ def deck_create_view(request):
             name = form.cleaned_data['name']
             new_deck = Deck(name=name, date_created=datetime.now())
             new_deck.save()
-            return HttpResponseRedirect('/adicards/decks/')
+            return HttpResponseRedirect('/decks/')
     return render(request, 'deck_create.html', {'form': DeckCreateForm()})
 
 
@@ -51,5 +51,5 @@ def flashcard_create_view(request):
                 # https://stackoverflow.com/questions/11315010/what-do-and-before-a-variable-name-mean-in-a-function-signature
                 new_flashcard.decks.add(*decks)
                 new_flashcard.save()
-                return HttpResponseRedirect('/adicards/decks/')
+                return HttpResponseRedirect('/decks/')
     return render(request, 'flashcard_create.html', {'form': FlashcardCreateForm()})
