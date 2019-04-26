@@ -2,37 +2,37 @@
 A flashcard webapp created in Python using Django.
 
 ## Installation
-Create a Django project
+Create a Django project:
 ```
 django-admin startproject mysite
 ```
 
-Clone this repository in the root directory of that project
+Clone this repository in the root directory of that project:
 ```
 git clone https://github.com/NotTejasRao/LeetCards.git
 ```
 
-In ```urls.py```, add
+In ```urls.py```, add:
 ```python
 urlpatterns = [path('', include('leetcards.urls'))]
 ```
 
-In ```settings.py```, add
+In ```settings.py```, add:
 ```python
 INSTALLED_APPS = ['leetcards']
 ```
 
-Create the database
+Migrate models to the database:
 ```
 python manage.py migrate
 ```
 
-Run the development server
+Run the development server:
 ```
 python manage.py runserver
 ```
 
-You should now have the project running on localhost:8000
+You should now have the project running on localhost:8000.
 
 ## Contribute
 
