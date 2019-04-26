@@ -2,8 +2,8 @@ from datetime import datetime
 
 from django.shortcuts import render, HttpResponseRedirect
 
-from adicards.forms import DeckCreateForm, FlashcardCreateForm
-from adicards.models import Deck, Flashcard
+from leetcards.forms import DeckCreateForm, FlashcardCreateForm
+from leetcards.models import Deck, Flashcard
 
 
 def deck_view(request, deck_id):

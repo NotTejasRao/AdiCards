@@ -1,6 +1,6 @@
 from django.forms import Form, CharField, ModelMultipleChoiceField, Textarea
 
-from adicards.models import Deck
+from leetcards.models import Deck
 
 
 class DeckCreateForm(Form):

@@ -1,4 +1,4 @@
-AdiCards
+LeetCards
 ======
 A flashcard web app created in Python using Django.
 
@@ -11,17 +11,17 @@ django-admin startproject mysite
 
 Clone this repository in the root directory of that project:
 ```
-git clone https://github.com/NotTejasRao/AdiCards.git
+git clone https://github.com/NotTejasRao/LeetCards.git
 ```
 
 In ```urls.py```, add:
 ```python
-urlpatterns = [path('', include('adicards.urls'))]
+urlpatterns = [path('', include('leetcards.urls'))]
 ```
 
 In ```settings.py```, add:
 ```python
-INSTALLED_APPS = ['adicards']
+INSTALLED_APPS = ['leetcards']
 ```
 
 Create the database:
