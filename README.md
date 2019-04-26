@@ -34,9 +34,9 @@ python manage.py runserver
 
 You should now have the project running on localhost:8000
 
-## Programming Conventions
+## Contribute
 
-If you would like to contribute: 
+Care to make this project better? Follow these conventions and submit a pull request!
 
 1. Use "from file.py import ClassName" for classes, and "import path.to.file.py as file" to reference definations.
 2. Prefix html files with the object they interact with (ex. flashcard) and suffix with what it helps do to them (ex. create) -- ie. flashcard_create.html is acceptable.
