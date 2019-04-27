@@ -1,9 +1,7 @@
-LeetCards
-======
-A flashcard web app created in Python using Django.
+# LeetCards
+_A flashcard webapp created in Python using Django._
 
-Installation:
------------
+## Installation
 Create a Django project:
 ```
 django-admin startproject mysite
@@ -24,7 +22,7 @@ In ```settings.py```, add:
 INSTALLED_APPS = ['leetcards']
 ```
 
-Create the database:
+Migrate models to the database:
 ```
 python manage.py migrate
 ```
@@ -34,14 +32,14 @@ Run the development server:
 python manage.py runserver
 ```
 
-You should now have the project running on localhost:8000
+You should now have the project running on localhost:8000.
 
-Coding Conventions:
------------
+## Contribute
+
+Care to make this project better? Follow these conventions and submit a pull request!
 
 1. Use "from file.py import ClassName" for classes, and "import path.to.file.py as file" to reference definations.
 2. Prefix html files with the object they interact with (ex. flashcard) and suffix with what it helps do to them (ex. create) -- ie. flashcard_create.html is acceptable.
 
-Licence:
------------
+## Licence
 GPL2
