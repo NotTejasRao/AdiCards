@@ -1,6 +1,16 @@
 # LeetCards
 _A flashcard webapp created in Python using Django._
 
+## Screenshots
+
+### Homepage
+![homepage.png](docs/homepage.png?raw=true)
+
+### Adding Flashcards to Multiple Decks
+![one_to_many.png](docs/one_to_many.png?raw=true)
+![decks_example.png](docs/decks_example.png?raw=true)
+
+
 ## Installation
 Create a Django project:
 ```
