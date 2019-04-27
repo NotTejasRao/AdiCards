@@ -24,7 +24,8 @@ INSTALLED_APPS = ['leetcards']
 
 Migrate models to the database:
 ```
-python manage.py migrate
+python manage.py makemigrations
+python manage.py migrate --run-syncdb
 ```
 
 Run the development server:
