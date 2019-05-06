@@ -1,5 +1,5 @@
 # LeetCards
-_A flashcard webapp created in Python using Django._
+_A flashcard web application created in Python using Django._
 
 ## Screenshots
 
